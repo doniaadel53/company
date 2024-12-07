@@ -27,3 +27,18 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+  // Define the gtag_report_conversion function
+  function gtag_report_conversion(url) {
+    gtag('event', 'click', {
+      'event_category': 'WhatsApp',
+      'event_label': 'Click to chat with us',
+      'value': 1
+    });
+    // Optional: Redirect to the WhatsApp link after tracking the event
+    if (url) {
+      window.location = url;
+    }
+    return false;
+  }
+

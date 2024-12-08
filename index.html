@@ -308,14 +308,52 @@
       <script src="js/jquery-3.7.1.min.js"></script>
       <script src="js/main.js"></script>
       <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-S3VGSPPL2G"></script>
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-S3VGSPPL2G"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'G-S3VGSPPL2G');
+</script> -->
+    <script>
+  // Function to send data to your API
+  function sendDataToAPI(data) {
+    fetch('https://doniaadel53.github.io/company/api/endpoint', {
+      method: 'POST', 
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Success:', data);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+  }
+
+  // Example of calling the function with some data
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+
+  gtag('js', new Date());
+  
+  // Example data to send to your API
+  const eventData = {
+    event: 'page_view',
+    timestamp: new Date().toISOString(),
+    page: window.location.href
+  };
+
+  // Send data to your custom API
+  sendDataToAPI(eventData);
 </script>
+
       
 </body>
 </html>

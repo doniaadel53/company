@@ -228,7 +228,6 @@ section#about img {
 }
 
 section#about .bg {
-
     background-image: url("../images/dots.png");
     position: absolute;
     background-repeat: repeat;

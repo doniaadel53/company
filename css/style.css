@@ -33,7 +33,7 @@ section .title h3::before {
     content: "";
     width: 8px;
     height: 8px;
-    background-color:#133E87;
+    background-color: #133E87;
     border-radius: 50%;
     position: absolute;
     bottom: 10px;

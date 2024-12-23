@@ -208,7 +208,7 @@ header#hero h1,h3 {
 
 }
 header#hero p{
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 400;
     color: #fff;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #32BEA4, -1px 1px 0 #000, 1px 1px 0 #000;
